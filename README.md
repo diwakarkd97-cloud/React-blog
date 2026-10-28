@@ -1,16 +1,42 @@
-# React + Vite
+# React Tech Blog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive, multi-page tech blog application built with React and Vite. This project demonstrates dynamic routing, component-based architecture, and responsive CSS design without the use of external UI libraries.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Dynamic Routing:** Built with `react-router-dom` to navigate seamlessly between category pages (Full Stack, Data Science, Cyber Security, AI) without page reloads.
+* **Dynamic Data Rendering:** Utilizes the JavaScript `.map()` function to dynamically render `BlogCard` components from a central mock data file.
+* **URL Parameter Extraction:** Uses `useParams` to fetch and display specific blog content based on the clicked card's ID.
+* **Fully Responsive Design:** Custom CSS media queries ensure the layout adapts perfectly across Desktop, Tablet (992px/768px), and Mobile (576px) screens.
+* **Sticky Navigation:** Features a custom `.sticky-wrapper` that keeps the Header and Navigation bar at the top of the screen during scrolling.
+* **Custom 404 Page:** Includes a fallback error component to handle unknown routes.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Framework:** React 19 (via Vite)
+* **Routing:** React Router DOM (v7)
+* **Styling:** Vanilla CSS (Flexbox, Media Queries)
+* **Typography:** Open Sans (Google Fonts)
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```text
+src/
+ ├── components/
+ │    ├── Ai.jsx
+ │    ├── All.jsx
+ │    ├── Blog.jsx
+ │    ├── BlogCard.jsx
+ │    ├── CyberSecurity.jsx
+ │    ├── DataScience.jsx
+ │    ├── Error.jsx
+ │    ├── FullStack.jsx
+ │    ├── Header.jsx
+ │    ├── NavBar.jsx
+ │    └── Template.jsx
+ ├── data/
+ │    └── blogsData.js
+ ├── App.css
+ ├── App.jsx
+ ├── index.css
+ └── main.jsx
